@@ -182,7 +182,7 @@ namespace Kezyma.ModOrganizerSetup
             {
                 Invoke(new Action(() => UpdateProgress(per, $"Extracting MO v{param.Version}")));
             });
-            _moService.ExtractVersion(param.Version, param.InstallPath, moExtProg);
+            _moService.ExtractVersion(param.Version, param.InstallPath, moExtProg).Wait();
             Invoke(new Action(() => UpdateProgress(100, $"Extracted MO v{param.Version}")));
 
             // Download all selected plugins.

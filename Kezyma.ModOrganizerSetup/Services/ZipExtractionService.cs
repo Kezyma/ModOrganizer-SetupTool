@@ -9,7 +9,7 @@ namespace Kezyma.ModOrganizerSetup.Services
 {
     public class ZipExtractionService : BaseService
     {
-        public const string SzaExe = "https://github.com/Kezyma/ModOrganizer-Plugins/raw/main/src/pluginfinder/modules/7za.exe";
+        public const string SzaExe = "https://github.com/Kezyma/ModOrganizer-Plugins/raw/main/src/plugin/pluginfinder/util/7za.exe";
         public static string SzaExePath => Path.Combine(DataPath, "7za.exe");
 
         public void ExtractZip(string zipPath, string destPath)
